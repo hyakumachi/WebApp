@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pacanza WebApp IT2C</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      href="https://www.redbullracing.com/_next/static/media/redbullracing-logo.2b2d869c.svg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Add Student</h2>
+      <form id="studentForm">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required />
+
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required />
+
+        <label for="birthdate">Birthdate</label>
+        <input type="date" id="birthdate" name="birthdate" required />
+
+        <label>Gender</label>
+        <div class="gender-container">
+          <label for="male">Male</label>
+          <input type="radio" id="male" name="gender" value="Male" required />
+          <label for="female">Female</label>
+          <input
+            type="radio"
+            id="female"
+            name="gender"
+            value="Female"
+            required
+          />
+        </div>
+
+        <label for="course">Course</label>
+        <select id="course" name="course" required>
+            <option value="" disabled selected>Choose Course</option>
+          <option value="BS Computer Science">BS Computer Science</option>
+          <option value="BS Data Science">BS Data Science</option>
+          <option value="BS Information Systems">BS Information Systems</option>
+          <option value="BS Information Technology">
+            BS Information Technology
+          </option>
+        </select>
+
+        <div class="checkbox-container">
+          <input type="checkbox" id="consent" name="consent" required />
+          <label for="consent"
+            >I consent that my information can be used for archiving of student
+            record.</label
+          >
+        </div>
+
+        <button type="button" class="add" id="addButton">Add</button>
+        <button type="reset" class="reset">Reset</button>
+      </form>
+    </div>
+
+    <div class="table-container">
+      <input type="text" id="searchInput" placeholder="Search by Full Name" />
+      <table>
+        <thead>
+          <tr>
+            <th>Full Name</th>
+            <th>Birthdate</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Course</th>
+          </tr>
+        </thead>
+        <tbody id="studentTableBody">
+          <!-- Rows will be added dynamically here -->
+        </tbody>
+      </table>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
