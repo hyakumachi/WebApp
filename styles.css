@@ -91,7 +91,7 @@ th {
   width: 20%;
 }
 #birthdate {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 .gender-container {
   display: flex;
@@ -104,7 +104,8 @@ th {
   font-weight: normal;
 }
 
-.checkbox-container label, input {
+.checkbox-container label,
+input {
   font-weight: normal;
   margin: 10px 0;
 }
