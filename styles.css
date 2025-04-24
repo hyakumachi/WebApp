@@ -90,15 +90,21 @@ th {
 #course {
   width: 20%;
 }
-
+#birthdate {
+    text-transform: uppercase;
+}
 .gender-container {
   display: flex;
   align-items: center;
   gap: 5px;
-  margin-bottom: 20px;
-  margin-top: 10px;
+  margin: 10px 0;
 }
 
 .gender-container label {
   font-weight: normal;
+}
+
+.checkbox-container label, input {
+  font-weight: normal;
+  margin: 10px 0;
 }
