@@ -23,7 +23,18 @@ addButton.addEventListener("click", () => {
 
   const fullName = `${firstName} ${lastName}`;
   const birthDateObj = new Date(birthdate);
-  const age = new Date().getFullYear() - birthDateObj.getFullYear();
+ let age = new Date().getFullYear() - birthDateObj.getFullYear();
+
+  const today = new Date();
+  const hasHadBirthdayThisYear =
+    today.getMonth() > birthDateObj.getMonth() ||
+    (today.getMonth() === birthDateObj.getMonth() &&
+      today.getDate() >= birthDateObj.getDate());
+
+  if (!hasHadBirthdayThisYear) {
+    age--;
+  }
+
   const formattedBirthdate = birthDateObj.toLocaleDateString("en-US", {
     month: "long",
     day: "numeric",
